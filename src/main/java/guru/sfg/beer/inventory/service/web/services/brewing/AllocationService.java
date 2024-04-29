@@ -11,4 +11,6 @@ public interface AllocationService {
      * @return 割り当て可否
      */
     Boolean allocateOrder(BeerOrderDto beerOrderDto);
+
+    void deallocateOrder(BeerOrderDto beerOrderDto);
 }
