@@ -81,8 +81,10 @@ public class AllocationServiceImpl implements AllocationService {
                 // 部分割り当て
                 beerOrderLine.setQuantityAllocated(allocatedQty + inventory);
                 beerInventory.setQuantityOnHand(0);
+            }
 
-                // 在庫なしに更新
+            if(beerInventory.getQuantityOnHand() == 0){
+                // 在庫なし
                 beerInventoryRepository.delete(beerInventory);
             }
         });
