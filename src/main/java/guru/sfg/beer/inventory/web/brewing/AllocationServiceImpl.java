@@ -1,7 +1,7 @@
-package guru.sfg.beer.inventory.service.web.services.brewing;
+package guru.sfg.beer.inventory.web.brewing;
 
-import guru.sfg.beer.inventory.service.domain.BeerInventory;
-import guru.sfg.beer.inventory.service.repositories.BeerInventoryRepository;
+import guru.sfg.beer.inventory.domain.BeerInventory;
+import guru.sfg.beer.inventory.repositories.BeerInventoryRepository;
 import guru.sfg.brewery.model.BeerOrderDto;
 import guru.sfg.brewery.model.BeerOrderLineDto;
 import lombok.RequiredArgsConstructor;

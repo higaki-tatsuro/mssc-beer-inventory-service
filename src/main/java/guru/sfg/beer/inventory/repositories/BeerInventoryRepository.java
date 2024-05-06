@@ -14,36 +14,20 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package guru.sfg.beer.inventory.service.domain;
+package guru.sfg.beer.inventory.repositories;
 
-import javax.persistence.Entity;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import guru.sfg.beer.inventory.domain.BeerInventory;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.sql.Timestamp;
+import java.util.List;
 import java.util.UUID;
 
 /**
  * Created by jt on 2019-01-26.
  */
-@Getter
-@Setter
-@NoArgsConstructor
-@Entity
-public class BeerInventory extends BaseEntity{
+public interface BeerInventoryRepository extends JpaRepository<BeerInventory, UUID> {
 
-    @Builder
-    public BeerInventory(UUID id, Long version, Timestamp createdDate, Timestamp lastModifiedDate, UUID beerId,
-                         String upc, Integer quantityOnHand) {
-        super(id, version, createdDate, lastModifiedDate);
-        this.beerId = beerId;
-        this.upc = upc;
-        this.quantityOnHand = quantityOnHand;
-    }
+    List<BeerInventory> findAllByBeerId(UUID beerId);
 
-    private UUID beerId;
-    private String upc;
-    private Integer quantityOnHand = 0;
+    List<BeerInventory> findAllByUpc(String upc);
 }

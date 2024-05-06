@@ -1,4 +1,4 @@
-package guru.sfg.beer.inventory.service.web.services.brewing;
+package guru.sfg.beer.inventory.web.brewing;
 
 import guru.sfg.brewery.model.BeerOrderDto;
 

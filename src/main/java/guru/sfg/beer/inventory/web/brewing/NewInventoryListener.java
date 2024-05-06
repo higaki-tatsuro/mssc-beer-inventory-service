@@ -1,9 +1,9 @@
-package guru.sfg.beer.inventory.service.web.services.brewing;
+package guru.sfg.beer.inventory.web.brewing;
 
-import guru.sfg.beer.inventory.service.config.JmsConfig;
-import guru.sfg.beer.inventory.service.domain.BeerInventory;
+import guru.sfg.beer.inventory.config.JmsConfig;
+import guru.sfg.beer.inventory.domain.BeerInventory;
 
-import guru.sfg.beer.inventory.service.repositories.BeerInventoryRepository;
+import guru.sfg.beer.inventory.repositories.BeerInventoryRepository;
 import guru.sfg.brewery.model.events.NewInventoryEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
